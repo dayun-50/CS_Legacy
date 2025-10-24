@@ -25,6 +25,13 @@
 	<form action="/notice/list">
 		<header class="header d-flex align-items-center">
 			<jsp:include page="/WEB-INF/views/common/sideBar/topBar.jsp" />
+
+			<%-- 💡 수정: 이 햄버거 버튼은 topBar.jsp로 옮겼으므로 제거합니다. --%>
+			<%-- 
+            <button id="menuToggle" class="btn btn-light d-md-none me-2">
+				<img src="<c:url value='/resources/imgs/Menu.svg' />" alt="menu" />
+			</button>
+            --%>
 		</header>
 
 		<div class="container-fluid body-wrapper">
@@ -36,7 +43,7 @@
 				</div>
 
 				<div class="col-10 px-0 content">
-					<h2>공지사항 리스트</h2>
+					<jsp:include page="/WEB-INF/views/${contentPage}.jsp" />
 				</div>
 			</div>
 		</div>
